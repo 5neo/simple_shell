@@ -8,17 +8,18 @@
  *
  * Return: None (void).
  */
-
 void readCommand(char *input, size_t bufsize) {
-	
-    int charsRead = getline(&input, &bufsize, stdin);
 
-    if (charsRead == -1) {	
-        perror("getline");
-        exit(EXIT_FAILURE);
-    }
+	int charsRead = getline(&input, &bufsize, stdin);
 
-    if (input[charsRead - 1] == '\n') {
-        input[charsRead - 1] = '\0';
-    }
+	if (charsRead == -1)
+	{
+		perror("getline");
+		exit(EXIT_FAILURE);
+	}
+
+	if (input[charsRead - 1] == '\n')
+	{
+		input[charsRead - 1] = '\0';
+	}
 }
