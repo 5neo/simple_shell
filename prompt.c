@@ -5,6 +5,7 @@
  *
  * Return: nothing.
  */
-void display_prompt(void) {
-    nemo_print("$ ");
+void display_prompt(void)
+{
+	nemo_print("$ ");
 }
