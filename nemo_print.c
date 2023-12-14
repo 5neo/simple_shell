@@ -1,6 +1,6 @@
 #include "shell.h"
 
-/*
+/**
  * nemo_print - Prints the provided message to the standard output.
  *
  * @message: A pointer to the null-terminated string to be printed.

@@ -8,7 +8,8 @@
  *
  * Return: None (void).
  */
-void readCommand(char *input, size_t bufsize) {
+void readCommand(char *input, size_t bufsize)
+{
 
 	int charsRead = getline(&input, &bufsize, stdin);
 

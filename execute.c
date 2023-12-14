@@ -1,15 +1,17 @@
 #include "shell.h"
 
-/*
- * execCommand - Executes a specified command entered by the user.
+/**
+ * execCommand - Function Executes a specified command entered by the user.
  *
  * @command: A pointer to the null-terminated string representing the command.
  *
  * Return: This function returns nothing.
  */
-void execCommand(const char *command) {
+void execCommand(const char *command)
+{
 	pid_t child_pid = fork();
-	if(strcmp(command, "exit") == 0)
+
+	if (strcmp(command, "exit") == 0)
 	{
 		exit(0);
 	}
@@ -23,6 +25,7 @@ void execCommand(const char *command) {
 		char *args[100];
 		int arg_count = 0;
 		char *token = strtok((char *)command, " ");
+
 		while (token != NULL)
 		{
 			args[arg_count++] = token;
